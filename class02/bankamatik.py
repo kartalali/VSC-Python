@@ -2,8 +2,8 @@ hesapMerve = {
 
     'ad'        : 'Merve KARTAL',
     'hesapNo'   : '1356489',
-    'bakiye'    :   9500,
-    'ekHesap'   :   7500
+    'bakiye'    :   3500,
+    'ekHesap'   :   2500
 }
 
 hesapAli = {
@@ -19,7 +19,8 @@ def paraCek(hesap, miktar):
 
     if (hesap['bakiye'] >= miktar):
         hesap['bakiye'] -= miktar
-        print('Buyrun paranız')
+        print('Paranız hazırlanıyor, Lütfen kartınızı alınız')
+        bakiyeSorgula(hesap)
     else:
         toplam = hesap['bakiye'] + hesap['ekHesap'] 
 
@@ -30,13 +31,20 @@ def paraCek(hesap, miktar):
                 ekHesapKullanilacakMiktar = miktar - hesap['bakiye']
                 hesap['bakiye'] = 0
                 hesap['ekHesap'] -= ekHesapKullanilacakMiktar
-                print('Buyrun paranız')
-
+                print('Paranız hazırlanıyor, Lütfen kartınızı alınız')
+                bakiyeSorgula(hesap)
             else:
-                print(f"{hesap['hesapNo']} nolu hesabinizda {hesap['bakiye']} vardir.")
+                print(f"{hesap['hesapNo']} nolu hesabinizda {hesap['bakiye']} TL vardir.")
         else:
-            print('Bakiye yetersiz')
+            print('Bakiyeniz yetersizdir')
+            bakiyeSorgula(hesap)
+    
+def bakiyeSorgula(hesap):
+    print(f"{hesap['hesapNo']} nolu hesabınızda {hesap['bakiye']} TL bulunmaktadır. Ek hesap limitiniz ise {hesap['ekHesap']} TL bulunmaktadır.")
 
 
-paraCek(hesapAli, 2000)
-paraCek(hesapAli, 1000)
+paraCek(hesapMerve, 3000)
+
+print("*********************************")
+
+paraCek(hesapMerve, 1500)
