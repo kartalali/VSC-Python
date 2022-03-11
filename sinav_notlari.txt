@@ -1,0 +1,6 @@
+Metin Aras Kartal:98,89,93
+Melis Erva Kartal:100,99,82
+Ali Kartal:65,75,83
+Merve Kartal:88,99,91
+Emine Kartal:100,100,95
+Metin Kartal:80,90,82

@@ -43,8 +43,8 @@ def bakiyeSorgula(hesap):
     print(f"{hesap['hesapNo']} nolu hesabınızda {hesap['bakiye']} TL bulunmaktadır. Ek hesap limitiniz ise {hesap['ekHesap']} TL bulunmaktadır.")
 
 
-paraCek(hesapMerve, 3000)
+paraCek(hesapMerve, 3500)
 
 print("*********************************")
 
-paraCek(hesapMerve, 1500)
+paraCek(hesapMerve, 2500)
