@@ -16,7 +16,7 @@ class Github:
     def createRepository(self, name):
         response = requests.post(self.api_url+'/user/repos?access_token='+ self.token, json={
             "name": name,
-            "description": "This is your first repository ",
+            "description": "This is your first repository",
             "homepage": "https://alikartal.com",
             "private": False,
             "has_issues": True,
