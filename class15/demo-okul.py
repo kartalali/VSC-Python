@@ -14,7 +14,7 @@
 
 """ 
 *** Tek bir kayıt ekleme
-ahmet = Student("202","ahmet","yılmaz",datetime(2005, 5, 17),"E")
+ahmet = Ogrenci("202","ahmet","yılmaz",datetime(2005, 5, 17),"E")
 ahmet.saveStudent()
 """
 
@@ -28,7 +28,7 @@ ogrenciler = [
     ("305","Metin","Kartal",datetime(2004, 7, 27),"E"),
     ("306","Ali","Metin",datetime(2003, 8, 25),"E")
 ]
-Student.saveStudents(ogrenciler)
+Ogrenci.saveStudents(ogrenciler)
 """
 
 # 4- Aşağıdaki sorguları yazınız.
