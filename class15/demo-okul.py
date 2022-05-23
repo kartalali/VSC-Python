@@ -158,9 +158,9 @@ class Ogrenci:
             print('Hata:',err)
 
     @staticmethod
-    def getStudentsGender(gender):
+    def getStudentsGender(cinsiyet):
         sql = "select * from ogrenci where cinsiyet=%s"
-        value = (gender,)
+        value = (cinsiyet,)
 
         Ogrenci.mycursor.execute(sql,value)
 
